@@ -1,0 +1,160 @@
+
+
+.header-container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 0 0 8px 8px;
+  padding-top: 18px;
+  padding-right: 20px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  background-color: white;
+}
+
+.logo-icon {
+  width: 109px;
+  height: 28px;
+}
+
+.burger-button {
+  background-color: transparent;
+  border: none;
+  margin-left: 14px;
+}
+
+.burrger-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* styles for checkbox */
+.checkbox {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: transparent;
+  margin-left: auto;
+}
+
+.checkbox-input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkbox-switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #4f2ee8, #dcdcdc);
+  border-radius: 34px;
+}
+
+.checkbox-switch::before {
+  content: '';
+  position: absolute;
+  cursor: pointer;
+  top: 1px;
+  bottom: 1px;
+
+  left: 1px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.checkbox-input:checked+.checkbox-switch {
+  background: #393939;
+}
+
+.checkbox-input:checked+.checkbox-switch::before {
+  transform: translateX(20px);
+}
+
+/* modal-window-styles */
+
+.modal-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 84px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../images/mobile-bg.png'),
+    linear-gradient(to bottom, #5130e8, #b5a7f5);
+
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: auto;
+}
+
+.user-login-button {
+  display: block;
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.user-login-button-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 126px;
+}
+
+.user-photo {
+  width: 37px;
+  height: 37px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 9px;
+}
+
+.home-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 34px;
+  border-radius: 30px;
+  border: none;
+  background-color: #eac645;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
+
+.shopping-list-button {
+  display: block;
+  border: none;
+  background: transparent;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logout-button {
+  display: block;
+  width: 118px;
+  height: 48px;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-top: auto;
+}

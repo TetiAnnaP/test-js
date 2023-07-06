@@ -1,0 +1,183 @@
+.categories-container {
+  max-width: 375px;
+  height: 310px;
+  overflow-y: auto;
+  padding-top: 40px;
+  padding-right: 48px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categories-item {
+  margin-bottom: 24px;
+}
+
+.all {
+  margin-bottom: 24px;
+}
+
+.categories-btn,
+.category-btn {
+  border: none;
+  background-color: transparent;
+  color: #6d6d6d;
+  text-align: left;
+}
+
+.categories-btn:hover,
+.categories-btn:focus {
+  color: #5d3fea;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+}
+
+.category-btn:hover,
+.category-btn:focus {
+  color: #5d3fea;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+}
+
+.fonds-container {
+  max-width: 375px;
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.splide {
+  background-image: linear-gradient(to bottom, #5130e8, #b5a7f5);
+  border-radius: 20px;
+  padding-top: 24px;
+  padding-left: 40px;
+}
+
+.fonds-title-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 40px;
+}
+
+.fonds-title {
+  display: inline-block;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  /* text-align: center; */
+}
+
+.ukraine-icon {
+  width: 20px;
+  height: 32px;
+  margin-left: 12px;
+}
+
+.fonds-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.fonds-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+}
+
+.soc-num {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.soc-img {
+  display: inline-block;
+  filter: brightness(0%) invert();
+}
+
+.actions-against-hunger {
+  margin-left: -40px;
+}
+
+/* books============================== */
+
+.books-container {
+  max-width: 375px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.book-wrapper {
+  margin-bottom: 40px;
+}
+
+.hero-title {
+  color: #111111;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.hero-title-span {
+  color: #4f2ee8;
+}
+
+.books-category {
+  color: #bcb8b8;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.books-img {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 375px;
+  margin-bottom: 14px;
+}
+
+.books-name {
+  color: #111111;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.books-author {
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.load-more-btn {
+  display: block;
+  margin-left: auto;
+  /* width: 124px; */
+  height: 46px;
+  padding-top: 14px;
+  padding-right: 28px;
+  padding-bottom: 14px;
+  padding-left: 14px;
+  background-color: transparent;
+  border: 2px solid #4f2ee8;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
