@@ -25,6 +25,3 @@ function allCategories() {
 allCategories().then(html => {
   categoriesListEl.insertAdjacentHTML('beforeend', html);
 });
-
-const seeMoreBtn = document.querySelector('.load-more-btn');
-console.log(seeMoreBtn);
