@@ -1,4 +1,10 @@
+import { fetchBooksByCategory } from './categoriesbooks';
+import { bookMarkupByCategory } from './categoriesbooks';
+
+const heroTitleEl = document.querySelector('.hero-title-span-main');
+const heroTitleSpan = document.querySelector('.hero-title-span');
 const booksEl = document.querySelector('.books-container');
+
 const allCategoriesBtn = document.querySelector('.categories-btn');
 allCategoriesBtn.addEventListener('click', onAllCategoriesBtnClick);
 
@@ -25,10 +31,15 @@ function bookMarkup(book) {
 
   return markup;
 }
-function loadPopularBooks() {
-  fetchPopularBooks().then(res => {
+async function loadPopularBooks() {
+  await fetchPopularBooks().then(res => {
     const markup = res.map(book => bookMarkup(book)).join('');
     booksEl.innerHTML = markup;
+  });
+
+  const bookContainersEl = document.querySelectorAll('.book-wrapper');
+  bookContainersEl.forEach(bookContainerEl => {
+    bookContainerEl.addEventListener('click', onClickSeeMore);
   });
 }
 
@@ -36,4 +47,25 @@ loadPopularBooks();
 
 function onAllCategoriesBtnClick() {
   loadPopularBooks();
+  heroTitleEl.textContent = 'Best Sellers';
+  heroTitleSpan.textContent = 'Books';
+}
+
+function onClickSeeMore(e) {
+  if (!e.target.classList.contains('load-more-btn')) {
+    return;
+  } else {
+    const category = e.currentTarget.children[0].textContent;
+    fetchBooksByCategory(category).then(res => {
+      const markup = res.map(book => bookMarkupByCategory(book)).join('');
+      booksEl.innerHTML = markup;
+
+      const categoryWords = category.trim().split(' ');
+      const lastWord = categoryWords.pop();
+      const categoryTitle = categoryWords.join(' ');
+
+      heroTitleEl.textContent = categoryTitle;
+      heroTitleSpan.textContent = lastWord;
+    });
+  }
 }

@@ -5,13 +5,13 @@ const booksEl = document.querySelector('.books-container');
 
 categoryContainer.addEventListener('click', oncategoriesBtnClick);
 
-function oncategoriesBtnClick(e) {
+async function oncategoriesBtnClick(e) {
   if (!e.target.classList.contains('category-btn')) {
     return;
   } else {
     const category = e.target.textContent;
 
-    fetchBooksByCategory(category.trim()).then(res => {
+    await fetchBooksByCategory(category.trim()).then(res => {
       const markup = res.map(book => bookMarkupByCategory(book)).join('');
       booksEl.innerHTML = markup;
 
@@ -19,13 +19,13 @@ function oncategoriesBtnClick(e) {
       const lastWord = categoryWords.pop();
       const categoryTitle = categoryWords.join(' ');
 
-      heroTitleEl.innerHTML = categoryTitle;
-      heroTitleSpan.innerHTML = lastWord;
+      heroTitleEl.textContent = categoryTitle;
+      heroTitleSpan.textContent = lastWord;
     });
   }
 }
 
-function fetchBooksByCategory(name) {
+export function fetchBooksByCategory(name) {
   return fetch(
     `https://books-backend.p.goit.global/books/category?category=${name}`
   )
@@ -38,7 +38,7 @@ function fetchBooksByCategory(name) {
     .then(data => data);
 }
 
-function bookMarkupByCategory(book) {
+export function bookMarkupByCategory(book) {
   const markup = `
       <div class='book-wrapper'>
         
