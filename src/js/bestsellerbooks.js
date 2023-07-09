@@ -45,8 +45,8 @@ async function loadPopularBooks() {
 
 loadPopularBooks();
 
-function onAllCategoriesBtnClick() {
-  loadPopularBooks();
+async function onAllCategoriesBtnClick() {
+  await loadPopularBooks();
   heroTitleEl.textContent = 'Best Sellers';
   heroTitleSpan.textContent = 'Books';
 }

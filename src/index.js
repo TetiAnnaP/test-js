@@ -3,4 +3,3 @@ import './js/slider';
 import './js/categorieslist';
 import './js/bestsellerbooks';
 import './js/categoriesbooks';
-import './js/onecategorybooks';
